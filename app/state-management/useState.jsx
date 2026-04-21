@@ -29,7 +29,7 @@ export default function Counter() {
           -
         </button>
         <button
-          onClick={decrement}
+          onClick={reset}
           className="p-2 cursor-pointer  text-2xl text-white bg-gray-500 rounded-2xl px-5 font-bold"
         >
           Reset

@@ -7,7 +7,7 @@ import DoorDash from "./components/dordash";
 
 export default function Home() {
   return (
-    <div className="bg-white text-black h-screen">
+    <div className="bg-white text-black h-[100%]">
       {/* <Login /> */}
       {/* <Counter />
       <Message />

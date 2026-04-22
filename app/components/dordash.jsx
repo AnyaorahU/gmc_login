@@ -6,6 +6,33 @@ import {
 } from "react-icons/fa";
 import HeroCard from "./doordash-card";
 
+const data = [
+  {
+    id: 1,
+    imageurl: "/ScootScoot.svg",
+    headingText: "Become a Dasher",
+    paraText:
+      "As a delivery driver, make money and work on your schedule. Sign up in minutes.",
+    btn: "Start erning",
+  },
+  {
+    id: 2,
+    imageurl: "/Storefront.svg",
+    headingText: "Become a Dasher",
+    paraText:
+      "As a delivery driver, make money and work on your schedule. Sign up in minutes.",
+    btn: "Start erning",
+  },
+  {
+    id: 3,
+    imageurl: "/iphone.svg",
+    headingText: "Become a Dasher",
+    paraText:
+      "As a delivery driver, make money and work on your schedule. Sign up in minutes.",
+    btn: "Start erning",
+  },
+];
+
 export default function DoorDash() {
   return (
     <div>
@@ -59,8 +86,43 @@ export default function DoorDash() {
         </div>
       </header>
 
-      <div>
-        <HeroCard />
+      <div className="flex justify-center w-full">
+        {/* <HeroCard
+          image={"/ScootScoot.svg"}
+          heading={"Become a Dasher"}
+          paragraph={
+            "As a delivery driver, make money and work on your schedule. Sign up in minutes."
+          }
+          btnText={"start earning"}
+        />
+        <HeroCard
+          image={"/Storefront.svg"}
+          heading={"Become a Dasher"}
+          paragraph={
+            "As a delivery driver, make money and work on your schedule. Sign up in minutes."
+          }
+          btnText={"start earning"}
+        />
+        <HeroCard
+          image={"/iphone.svg"}
+          heading={"Become a Dasher"}
+          paragraph={
+            "As a delivery driver, make money and work on your schedule. Sign up in minutes."
+          }
+          btnText={"start earning"}
+        /> */}
+
+        {/* mapping  */}
+
+        {data.map((d) => (
+          <HeroCard
+            key={d.id}
+            image={d.imageurl}
+            heading={d.headingText}
+            paragraph={d.paraText}
+            btnText={d.btn}
+          />
+        ))}
       </div>
     </div>
   );

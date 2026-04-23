@@ -30,11 +30,11 @@ export default function Message() {
         Show Text
       </button>
 
-      {/* <p className="text-lg text-center ">{displayText}</p> */}
+      <p className="text-lg text-center ">{displayText}</p>
 
-      {displayText.map((item, index) => (
+      {/* {displayText.map((item, index) => (
         <p key={index}>{item}</p>
-      ))}
+      ))} */}
     </div>
   );
 }

@@ -10,36 +10,46 @@ export default function Login() {
     password: "",
   });
 
+  formData = {
+    email: "",
+    password: "",
+  };
+
+  // the form handeling to be able to edit the input and update the state
   const handleChange = (e) => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+      ...formData, // this holds the old state
+      [e.target.name]: e.target.value, // this holds the new state data
     });
   };
 
-  const [error, setError] = useState({});
+  const [error, setError] = useState({}); // state to handle validation error
 
+  // checking for validation error
   const validate = () => {
-    let newErrors = {};
+    let newErrors = {}; // empty new error
 
     if (!formData.email) {
-      newErrors.email = "Email is required";
+      // checking if the email input is empty
+      newErrors.email = "Email is required"; // the new error
     }
 
     if (!formData.password) {
-      newErrors.password = "Password is required";
+      // checking if the password is empty
+      newErrors.password = "Password is required"; // new error
     }
 
-    return newErrors;
+    return newErrors; // this returens the new error
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // this remove the pre-default state of the form
 
-    const validationError = validate();
-    setError(validationError);
+    const validationError = validate(); // passing the new error to a variable
+    setError(validationError); // changing the state of the error
 
     if (Object.keys(validationError).length === 0) {
+      // check if there is an error, if yes dont allow login if no allow login
       console.log("Login Data", formData);
       alert("Login successful");
     }

@@ -10,11 +10,6 @@ export default function Login() {
     password: "",
   });
 
-  formData = {
-    email: "",
-    password: "",
-  };
-
   // the form handeling to be able to edit the input and update the state
   const handleChange = (e) => {
     setFormData({
